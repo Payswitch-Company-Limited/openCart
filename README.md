@@ -7,6 +7,9 @@ This is a Theteller payment gateway for Opencart. Theteller is an integrated and
 
 = NOTE = This plugin currently only compatible for Opencart 3+ .
 
+Add this line into you .htaccess
+RewriteRule ^response/theteller/?$  index.php?route=extension/payment/theteller/callback [L]
+
 == Installation ==
 
 1.Download the plugin zip file
