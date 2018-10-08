@@ -3,9 +3,9 @@ Theteller payment gateway for Opencart
 
 == Introduction ==
 
-This is a Theteller payment gateway for Opencart. Theteller is an integrated and secure online payment and collection platform designed to enable individuals, businesses and institutions to make or receive payments online from their homes or offices. Theteller Opencart Payment Gateway allows you to accept local and International payment on your Opencart store via the use of a Visa/ MasterCard, Gh-link enabled card, mobile wallets. To get a Theteller merchant account visit Theteller website by clicking here With this Theteller Woocommerce Payment Gateway plugin, you will be able to accept the following payment methods in your shop: •	MasterCard •	Visa •	Mobile Wallet(MTN, TIGO-AIRTEL, VODAFONE)
+This is a Theteller payment gateway for Opencart. Theteller is an integrated and secure online payment and collection platform designed to enable individuals, businesses and institutions to make or receive payments online from their homes or offices. Theteller Opencart Payment Gateway allows you to accept local and International payment on your Opencart store via the use of a Visa/ MasterCard, Gh-link enabled card, mobile wallets. To get a Theteller merchant account visit Theteller website by clicking here With this Theteller Opencart Payment Gateway plugin, you will be able to accept the following payment methods in your shop: •	MasterCard •	Visa •	Mobile Wallet(MTN, TIGO-AIRTEL, VODAFONE)
 
-= NOTE = This plugin currently only compatible for Opencart 3+ .
+= NOTE = This plugin is only for Opencart 3+ .
 
 Add this line into you .htaccess
 RewriteRule ^response/theteller/?$  index.php?route=extension/payment/theteller/callback [L]
@@ -23,10 +23,10 @@ RewriteRule ^response/theteller/?$  index.php?route=extension/payment/theteller/
 
 6.Select the environment you want to test for test transaction and live for live transaction.
 
-7.Set Total order to 1 to enable gateway, you can set to more..
+7.Set Total order to 1 to enable gateway, you can set to more..this ensure that gateway is only available when order reached 1
 
 6.Click on the save disk on top to save details.
 
 You are Done
 
-BY MARC DONALD CHRISTOPHER AHOURE
+
