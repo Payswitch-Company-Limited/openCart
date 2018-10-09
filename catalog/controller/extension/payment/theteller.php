@@ -136,11 +136,58 @@ if ($err) {
     $response = json_decode($response, true);
     
     //Getting Response...
-    $status = $response['status'];
-    $code = $response['code'];
-    $reason = $response['reason'];
-    $token = $response['token'];
-    $checkout_url = $response['checkout_url'];
+    //$status = $response['status'];
+    //$code = $response['code'];
+    // $reason = $response['reason'];
+    // $token = $response['token'];
+    // $checkout_url = $response['checkout_url'];
+
+     if (!isset($response['status'])) {
+         $status = null;
+        }
+
+        else
+        {
+           $status = $response['status'];
+        }
+
+          if (!isset($response['code'])) {
+         $code = null;
+        }
+
+        else
+        {
+           $code = $response['code'];
+        }
+
+        if (!isset($response['reason'])) {
+         $reason = null;
+        }
+
+        else
+        {
+           $reason = $response['reason'];
+        }
+
+         if (!isset($response['token'])) {
+         $token = null;
+        }
+
+        else
+        {
+           $token = $response['token'];
+        }
+
+        if (!isset($response['checkout_url'])) {
+         $checkout_url = null;
+        }
+
+        else
+        {
+           $checkout_url = $response['checkout_url'];
+        }
+
+
 
     if($status == "success" && $code == "200" && $token !="")
     { 
