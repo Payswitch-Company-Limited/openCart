@@ -282,10 +282,10 @@ if ($err) {
         $reason_detail = $reason_detail[1];
         
 
-        if($trans_num != $transaction_id)
-		{
-			die("<h2 style=color:red>Code 0001 : Data has been tampered ! </h2>");
-		}
+  //       if($trans_num != $transaction_id)
+		// {
+		// 	die("<h2 style=color:red>Code 0001 : Data has been tampered ! </h2>");
+		// }
 
         //checking if transaction is successful
 		if($code == "code=000" && $status == "status=approved")
@@ -315,9 +315,14 @@ if ($err) {
 			
 		}
 
+else
+{
+   $this->model_checkout_order->addOrderHistory($this->session->data['order_id'], 10, "Thank you for shopping with us. However your transaction has been failed or declined ", true);
+       $this->response->redirect($this->url->link('checkout/checkout', '', true));
+}
 
-		
 			} // end of callback...
+
 			
 		
 		
