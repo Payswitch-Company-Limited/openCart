@@ -30,6 +30,14 @@ class ControllerExtensionPaymentTheteller extends Controller {
 			$data['error_merchant_id'] = '';
 		}
 
+
+		if (isset($this->error['merchant_name'])) {
+			$data['error_merchant_name'] = $this->error['merchant_name'];
+		} else {
+			$data['error_merchant_name'] = '';
+		}
+
+
 		if (isset($this->error['api_user'])) {
 			$data['error_api_user'] = $this->error['api_user'];
 		} else {
@@ -40,6 +48,13 @@ class ControllerExtensionPaymentTheteller extends Controller {
 			$data['error_api_key'] = $this->error['api_key'];
 		} else {
 			$data['error_api_key'] = '';
+		}
+
+
+		if (isset($this->error['channel'])) {
+			$data['error_channel'] = $this->error['channel'];
+		} else {
+			$data['error_channel'] = '';
 		}
 
 
@@ -88,6 +103,45 @@ class ControllerExtensionPaymentTheteller extends Controller {
 		} else {
 			$data['payment_theteller_api_key'] = $this->config->get('payment_theteller_api_key');
 		}
+
+
+		if (isset($this->request->post['payment_theteller_currency'])) {
+			$data['payment_theteller_currency'] = $this->request->post['payment_theteller_currency'];
+		} else {
+			$data['payment_theteller_currency'] = $this->config->get('payment_theteller_currency');
+		}
+
+
+		if (isset($this->request->post['payment_theteller_channel'])) {
+			$data['payment_theteller_channel'] = $this->request->post['payment_theteller_channel'];
+		} else {
+			$data['payment_theteller_channel'] = $this->config->get('payment_theteller_channel');
+		}
+
+		if (isset($this->request->post['payment_theteller_sms_status'])) {
+			$data['payment_theteller_sms_status'] = $this->request->post['payment_theteller_sms_status'];
+		} else {
+			$data['payment_theteller_sms_status'] = $this->config->get('payment_theteller_sms_status');
+		}
+
+		if (isset($this->request->post['payment_theteller_sms_api_user'])) {
+			$data['payment_theteller_sms_api_user'] = $this->request->post['payment_theteller_sms_api_user'];
+		} else {
+			$data['payment_theteller_sms_api_user'] = $this->config->get('payment_theteller_sms_api_user');
+		}
+
+		if (isset($this->request->post['payment_theteller_sms_api_password'])) {
+			$data['payment_theteller_sms_api_password'] = $this->request->post['payment_theteller_sms_api_password'];
+		} else {
+			$data['payment_theteller_sms_api_password'] = $this->config->get('payment_theteller_sms_api_password');
+		}
+
+		if (isset($this->request->post['payment_theteller_sms_api_senderid'])) {
+			$data['payment_theteller_sms_api_senderid'] = $this->request->post['payment_theteller_sms_api_senderid'];
+		} else {
+			$data['payment_theteller_sms_api_senderid'] = $this->config->get('payment_theteller_sms_api_senderid');
+		}
+
 
 
 		if (isset($this->request->post['payment_theteller_callback'])) {
