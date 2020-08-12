@@ -68,7 +68,7 @@
           </div>
 
 
-           <div class="form-group">
+           <div class="form-group required">
             <label class="col-sm-2 control-label" for="input-env">{{ entry_environment }} <span data-toggle="tooltip" title="{{ help_environment }}"></span></label>
             <div class="col-sm-10">
               <select name="payment_theteller_environment" id="input-env" class="form-control">
@@ -78,6 +78,33 @@
             </div>
           </div>
 
+
+          <div class="form-group required">
+            <label class="col-sm-2 control-label" for="input-currency">{{ entry_currency }} <span data-toggle="tooltip" title="{{ help_currency }}"></span></label>
+            <div class="col-sm-10">
+              <select name="payment_theteller_currency" id="input-currency" class="form-control">
+                <option value="GHS" selected="selected">GHS</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+              </select>
+
+            </div>
+          </div>
+
+
+          <div class="form-group required">
+            <label class="col-sm-2 control-label" for="input-env">{{ entry_channel }} <span data-toggle="tooltip" title="{{ help_channel }}"></span></label>
+            <div class="col-sm-10">
+              <select name="payment_theteller_channel" id="input-env" class="form-control">
+                <option value="both" selected="selected">Both</option>
+                <option value="card">Card Only</option>
+                <option value="momo">Mobile Money Only</option>
+              </select>
+            </div>
+          </div>
+
+
          
           <div class="form-group">
             <label class="col-sm-2 control-label" for="input-callback"><span data-toggle="tooltip" title="{{ help_callback }}">{{entry_callback}}</span></label>
@@ -85,6 +112,46 @@
               <textarea rows="5" name="payment_theteller_callback" readonly id="payment_theteller_callback" class="form-control">{{ callback }}</textarea>
             </div>
           </div>
+
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-sms-status">{{ entry_theteller_sms_status }} <span data-toggle="tooltip" title="{{ help_sms_status }}"></span></label>
+            <div class="col-sm-10">
+              <select name="payment_theteller_sms_status" id="input-env" class="form-control">
+                <option value="0" selected="selected">Disabled</option>
+                <option value="1">Active</option>
+              </select>
+            </div>
+          </div>
+
+
+           <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-sms-api-user">{{ entry_sms_api_user }} <span data-toggle="tooltip" title="{{ help_sms_api_user }}"></span></label>
+            <div class="col-sm-10">
+              <input type="text" name="payment_theteller_sms_api_user" value="{{ payment_theteller_sms_api_user }}" placeholder="{{ entry_sms_api_user }}" id="input-sms-api-user" class="form-control" />
+              
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-sms-api-password">{{ entry_sms_api_password }} <span data-toggle="tooltip" title="{{ help_sms_api_password }}"></span></label>
+            <div class="col-sm-10">
+              <input type="text" name="payment_theteller_sms_api_password" value="{{ payment_theteller_sms_api_password }}" placeholder="{{ entry_sms_api_password }}" id="input-sms-api-password" class="form-control" />
+              
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="input-sms-api-senderid">{{ entry_sms_api_senderid }} <span data-toggle="tooltip" title="{{ help_sms_api_senderid }}"></span></label>
+            <div class="col-sm-10">
+              <input type="text" name="payment_theteller_sms_api_senderid" value="{{ payment_theteller_sms_api_senderid }}" placeholder="{{ entry_sms_api_senderid }}" id="input-sms-api-senderid" class="form-control" />
+             
+            </div>
+          </div>
+
 
 
           <div class="form-group">
