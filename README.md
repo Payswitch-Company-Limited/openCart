@@ -1,4 +1,3 @@
-# opencart-theteller-payment-gateway
 Theteller payment gateway for Opencart
 
 == Introduction ==
@@ -7,13 +6,11 @@ This is a Theteller payment gateway for Opencart. Theteller is an integrated and
 
 = NOTE = This plugin is only for Opencart 3+ .
 
-Add this line into you .htaccess
-RewriteRule ^response/theteller/?$  index.php?route=extension/payment/theteller/callback [L]
+Add this line into you .htaccess RewriteRule ^response/theteller/?$ index.php?route=extension/payment/theteller/callback [L]
 
 == Installation ==
 
-1.Download the plugin zip file
-2.Extract the zip file.
+1.Download the plugin zip file 2.Extract the zip file.
 
 3.Locate the root OpenCart directory of your shop via FTP connection.
 
@@ -25,8 +22,14 @@ RewriteRule ^response/theteller/?$  index.php?route=extension/payment/theteller/
 
 7.Set Total order to 1 to enable gateway, you can set to more..this ensure that gateway is only available when order reached 1
 
-6.Click on the save disk on top to save details.
+
+= SMS Configuration = 
+
+Theteller SMS allows you to send SMS to your customer as receipt after successfull purchase. • SMS Status  – select Disabled or Active to  enable Theteller SMS. • SMS Api User  – Your API USER. will be given upon registration. • SMS Api Password  – YOUR API PASSWORD. will be given upon registration. • SMS SenderID  – This control what user sees as sender. Must be register before use. 11 characters Maximum.
+
+
+8.Select status either Enabled or Disabled to enable the Theteller Plugin on checkout
+
+9.Click on the save disk on top to save details.
 
 You are Done
-
-
